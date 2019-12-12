@@ -29,7 +29,7 @@ app.post("/", async (req, res) => {
 
   // Получаем сумму всех товаров
   const sum = price * quantity;
-  const total = sum.toFixed(2);
+  const total = sum.toFixed(2) * valute.Value.toFixed(2);
 
   res.json({ total });
 });
